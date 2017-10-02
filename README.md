@@ -31,7 +31,10 @@ In the WHMV&T, users will be able to:
 
 ## Implementation Timeline 
 
-Day 1: Organize filestructure. Create buttons and timer, get them responding to user interaction. Create layout of page with a grid and the instructions on the lefthand side of the page.
-Day 2: Create CSS animated pulser (very simple mandala or circle shape) with keyframes. Be able to control the speed of the pulser by clicking up and down buttons. Figure out how to auto-stop the animation with a timer. 
-Day 3: Final work on getting the start and stop buttons working correctly, triggering the pulser, auto-stopping the pulser, and triggering the automatic timer. Start on CSS jellyfish. 
-Day 4: CSS jellyfish animation! Connect to timing cycle. 
+**Day 1:** Organize filestructure. Create buttons and timer, get them responding to user interaction. Create layout of page with a grid and the instructions on the lefthand side of the page.
+
+**Day 2:** Create CSS animated pulser (very simple mandala or circle shape) with keyframes. Be able to control the speed of the pulser by clicking up and down buttons. Figure out how to auto-stop the animation with a timer. 
+
+**Day 3:** Final work on getting the start and stop buttons working correctly, triggering the pulser, auto-stopping the pulser, and triggering the automatic timer. Start on CSS jellyfish. 
+
+**Day 4:** CSS jellyfish animation! Connect to timing cycle. 
