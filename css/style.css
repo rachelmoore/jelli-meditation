@@ -1,9 +1,172 @@
 body {
-    font-family: 'Sumana', serif;
-    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    color: #e5e5e5;
+    background-color: #1E1E1E;
+
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0px;
+    color: #e5e5e5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.j {
+    font-size: 38px;
+}
+
+.e {
+    font-size: 38px;
+}
+
+.l1 {
+    font-size: 38px;
+}
+
+.l2 {
+    font-size: 38px;
+}
+
+.i {
+    font-size: 38px;
+}
+
+.social {
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.left-sidebar {
+    min-width: 350px;
+}
+
+.start {
+    min-height: 25px;
+    width: 70px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #e5e5e5
+}
+
+.stop {
+    min-height: 25px;
+    width: 70px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #e5e5e5
+}
+
+.timer {
+    font-family: 'Roboto', sans-serif;
+    color: #e5e5e5;
+    font-size: 38px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.jellyfish-container {
+    min-width: 800px;
+}
+
+.jellyfish-animation {
+  margin: 150px;
+  width: 200px;
+  height: 200px;
+  background-color: #e5e5e5;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 0 10px #e5e5e5; 
+  -moz-box-shadow: 0 0 10px #e5e5e5; 
+  box-shadow: 0 0 10px #e5e5e5;
+  animation-name: circle-pulse; 
+  animation-direction: alternate;
+  animation-iteration-count: 6;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out;
+  
+}
+
+.jellyfish-animation:before {
+   
+}
+
+.jellyfish-animation:after {
+    content: '';
+    background-color: #1E1E1E;
+    width: 180px;
+    height: 180px;
+    display: block;
+    position: relative;
+    border-radius: 90px;
+    left: 10px;
+    top: 10px;
+    -webkit-box-shadow: 0 0 10px #e5e5e5; 
+    -moz-box-shadow: 0 0 10px #e5e5e5; 
+    box-shadow: 0 0 10px #e5e5e5;
+    
+}
+
+
+ 
+@keyframes circle-pulse {
+  0%  {
+    transform: scale(1);
+    -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  }
+  25%  {
+    transform: scale(1.25);
+    -moz-border-radius: 113px;
+  -webkit-border-radius: 113px;
+  border-radius: 113px;
+  }
+  50%  {
+    transform: scale(1.5);
+    -moz-border-radius: 125px;
+  -webkit-border-radius: 125px;
+  border-radius: 125px;
+  }
+  75%  { 
+    transform: scale(1.75);
+    -moz-border-radius: 138px;
+  -webkit-border-radius: 138px;
+  border-radius: 138px;
+  }
+  
+  100% {  
+    transform: scale(2);
+    -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+  }
 }
