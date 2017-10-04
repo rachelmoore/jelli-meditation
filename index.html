@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel='stylesheet' href='css/style.css' type='text/css'>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -39,8 +40,8 @@
                     <p>Step 1: Click the "Start Breath Cycle" button below as you take a deep inhale, fully filling your lungs. Let the air out
                         gently and click "Stop" button when you have fully exhaled.</p>
                     <div id="start-stop-buttons" class="start-stop-buttons">
-                        <button id="start" class="start" onClick="startInterval()">Start</button>
-                        <button id="stop" class="stop" onClick="stopInterval()">Stop</button>
+                        <button id="start" class="start" onClick="interval.startInterval()">Start</button>
+                        <button id="stop" class="stop" onClick="interval.stopInterval()">Stop</button>
                     </div>
                 </div>
 
@@ -78,6 +79,7 @@
 
         <div id="footer" class="footer">
             <div id="timer" class="timer">
+                <button id="start-timer" class="start-timer" onClick="timer.start()">Start</button>
                 <span class="minute">00</span>:<span class="second">00</span>:<span class="millisecond">00</span>
             </div>
             <!-- <h3>अधिṭṭह्āना - Pali for "strong determination"</h3> -->
