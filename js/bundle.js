@@ -90,7 +90,10 @@ class Interval {
     stopInterval() {
         this.nextTime = new Date();
         console.log(this.nextTime);
-        this.defineInterval();
+        let animationInterval = this.defineInterval();
+        console.log(animationInterval);
+        document.getElementById("jellyfish-animation").style.animationIterationCount = 4;
+        document.getElementById("jellyfish-animation").style.animationDuration = "5900ms";
     }
 
     defineInterval() {
