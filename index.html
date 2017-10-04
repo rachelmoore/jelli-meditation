@@ -34,26 +34,52 @@
         <div id="content-container" class="content-container">
 
             <div id="left-sidebar" class="left-sidebar">
-                <div id="start-stop-buttons class="start-stop-buttons">
-                    <button id="start" class="start">Start</button>
-                    <button id="stop" class="stop">Stop</button>
+                
+                <div id="step-one" class="step-one">
+                    <p>Step 1: Click the "Start Breath Cycle" button below as you take a deep inhale, fully filling your lungs. Let the air out
+                        gently and click "Stop" button when you have fully exhaled.</p>
+                    <div id="start-stop-buttons" class="start-stop-buttons">
+                        <button id="start" class="start" onClick="startInterval()">Start</button>
+                        <button id="stop" class="stop" onClick="stopInterval()">Stop</button>
+                    </div>
                 </div>
+
+                <div id="step-two" class="step-two">
+                    <p>Step 2: The animation in the right window will immediately start pulsing upon clicking "Stop Breath Cycle" to the rhythym
+                    that you just set. To speed up or slow down the cycle as you breathe, use the up and down buttons below.</p>
+                    <div id="up-down-buttons" class="up-down-buttons">
+                        <button id="up" class="up"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+                        <button id="down" class="down"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <div id="step-three" class="step-three">
+                    <p>Step 3: Breathe in fully as the animation pulses outward, and gently exhale as it pulses inward. When the animation stops
+                    pulsing the timer in the lower right corner will automatically begin. See how long you can hold your
+                    breath then press the stop button when you finally inhale to track your time.</p>
+                </div>
+
+                <div id="step-four" class="step-four">
+                    <p>Step 4: Hit the "Start Breath Cycle" button to start the whole process over again. Wim Hof recommends doing this cycle 3-4
+                    times. Learn more about Wim Hof's philosophy and breathwork style here:</p>
+                </div>
+    
             </div>
 
             <div id="jellyfish-container" class="jellyfish-container">
-                <p> Jellyfish container</p>
+                <!-- <p> Jellyfish container</p> -->
                 <div id="jellyfish-animation" class="jellyfish-animation">
                     <!-- <p>Jellyfish animation</p> -->
                 </div>
 
-                <div id="timer" class="timer">
-                    <p>00:00:00</p>
-                </div>
             </div>
 
         </div>
 
         <div id="footer" class="footer">
+            <div id="timer" class="timer">
+                <span class="minute">00</span>:<span class="second">00</span>:<span class="millisecond">00</span>
+            </div>
             <!-- <h3>अधिṭṭह्āना - Pali for "strong determination"</h3> -->
         </div>
 

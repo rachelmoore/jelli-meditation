@@ -1,0 +1,14 @@
+
+class Interval {
+
+
+
+    startInterval() {
+
+    }
+
+    stopInterval() {
+
+    }
+
+}

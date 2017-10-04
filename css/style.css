@@ -24,23 +24,23 @@ p {
 }
 
 .j {
-    font-size: 38px;
+    font-size: 48px;
 }
 
 .e {
-    font-size: 38px;
+    font-size: 48px;
 }
 
 .l1 {
-    font-size: 38px;
+    font-size: 48px;
 }
 
 .l2 {
-    font-size: 38px;
+    font-size: 48px;
 }
 
 .i {
-    font-size: 38px;
+    font-size: 48px;
 }
 
 .social {
@@ -48,13 +48,22 @@ p {
     padding-right: 10px;
 }
 
+
 .content-container {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 1100px;
+    max-width: 1300px;
 }
 
 .left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     min-width: 350px;
+    max-width: 350px;
 }
 
 .start {
@@ -92,11 +101,17 @@ p {
 }
 
 .jellyfish-container {
-    min-width: 800px;
+    margin-left: 10px;
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .jellyfish-animation {
-  margin: 150px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 100px;
   width: 200px;
   height: 200px;
   background-color: #e5e5e5;
@@ -169,4 +184,8 @@ p {
   -webkit-border-radius: 150px;
   border-radius: 150px;
   }
+}
+
+.footer {
+  
 }
