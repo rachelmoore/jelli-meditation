@@ -38,15 +38,30 @@ class Timer {
     }
 
     printTime() {
-        // Format the time in HH:MM:SS
-        const timeString = [this.hours, this.minutes, this.seconds].join(":");
+        let second = 0;
+        let minute = 0;
+        let hour = 0;
 
-        // Use console.log to print it.
+        second = (this.seconds < 10) ? "0"+this.seconds : this.seconds;
+        minute = (this.minutes < 10) ? "0"+this.minutes : this.minutes;
+        hour = (this.hours < 10) ? "0"+this.hours : this.hours;
+
+        let spanSecond = document.getElementById('second');
+        let spanMinute = document.getElementById('minute');
+        let spanHour = document.getElementById('hour');
+
+        spanSecond.innerHTML = second;
+        spanMinute.innerHTML = minute;
+        spanHour.innerHTML = hour;
+        
+        const timeString = [hour, minute, second].join(":");
+
+        // don't forget to clear after testing
         console.log(timeString);
     }
 
     start() {
-        setInterval(this.tick, 1000);
+        this.running = setInterval(this.tick, 1000);
     }
 
     tick() {
@@ -75,7 +90,7 @@ class Timer {
     }
 
     stop() {
-        clearInterval(this.start);
+        clearInterval(this.running);
     }
 }
 

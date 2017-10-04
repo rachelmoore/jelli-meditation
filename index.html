@@ -40,8 +40,8 @@
                     <p>Step 1: Click the "Start Breath Cycle" button below as you take a deep inhale, fully filling your lungs. Let the air out
                         gently and click "Stop" button when you have fully exhaled.</p>
                     <div id="start-stop-buttons" class="start-stop-buttons">
-                        <button id="start" class="start" onClick="interval.startInterval()">Start</button>
-                        <button id="stop" class="stop" onClick="interval.stopInterval()">Stop</button>
+                        <button id="start" class="start" onClick="interval.startInterval()">Start Breath Cycle</button>
+                        <button id="stop" class="stop" onClick="interval.stopInterval()">Stop Breath Cycle</button>
                     </div>
                 </div>
 
@@ -80,7 +80,8 @@
         <div id="footer" class="footer">
             <div id="timer" class="timer">
                 <button id="start-timer" class="start-timer" onClick="timer.start()">Start</button>
-                <span class="minute">00</span>:<span class="second">00</span>:<span class="millisecond">00</span>
+                <span class="hour" id="hour">00</span>:<span class="minute" id="minute">00</span>:<span class="second" id="second">00</span>
+                <button id="stop-timer" class="stop-timer" onClick="timer.stop()">Stop</button>
             </div>
             <!-- <h3>अधिṭṭह्āना - Pali for "strong determination"</h3> -->
         </div>

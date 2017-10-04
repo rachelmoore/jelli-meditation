@@ -68,7 +68,7 @@ p {
 
 .start {
     min-height: 25px;
-    width: 70px;
+    width: 150px;
     color: #1E1E1E;
     background-color: transparent;
     border: 2px solid #e5e5e5;
@@ -79,9 +79,16 @@ p {
     color: #e5e5e5
 }
 
+.start:hover {
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
 .stop {
     min-height: 25px;
-    width: 70px;
+    width: 150px;
     color: #1E1E1E;
     background-color: transparent;
     border: 2px solid #e5e5e5;
@@ -90,6 +97,13 @@ p {
     text-transform: uppercase;
     margin: 10px;
     color: #e5e5e5
+}
+
+.stop:hover {
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
 }
 
 .timer {
