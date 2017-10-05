@@ -239,24 +239,24 @@ p {
   -webkit-border-radius: 100px;
   border-radius: 100px;
   }
-  25%  {
+  /* 25%  {
     transform: scale(1.25);
     -moz-border-radius: 113px;
   -webkit-border-radius: 113px;
   border-radius: 113px;
-  }
+  } */
   50%  {
     transform: scale(1.5);
     -moz-border-radius: 125px;
   -webkit-border-radius: 125px;
   border-radius: 125px;
   }
-  75%  { 
+  /* 75%  { 
     transform: scale(1.75);
     -moz-border-radius: 138px;
   -webkit-border-radius: 138px;
   border-radius: 138px;
-  }
+  } */
   
   100% {  
     transform: scale(2);

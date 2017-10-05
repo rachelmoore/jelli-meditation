@@ -16,8 +16,8 @@ class Interval {
         console.log(this.nextTime);
         let animationInterval = this.defineInterval();
         console.log(animationInterval);
-        document.getElementById("jellyfish-animation").style.animationIterationCount = 4;
-        document.getElementById("jellyfish-animation").style.animationDuration = '6000ms';
+        document.getElementById("jellyfish-animation").style.animationIterationCount = 10;
+        document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
     }
 
     defineInterval() {
@@ -25,16 +25,17 @@ class Interval {
         return this.timeInterval;
     }
 
-    increaseSpeed() {
-        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
-        document.getElementById("jellyfish-animation").style.animationDuration = '${jellySpeed}+1000ms';
-        console.log(jellySpeed);
+    // increaseSpeed() {
+    //     let animationInterval = this.defineInterval();
+    //     let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+    //     document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
+    //     console.log(jellySpeed);
         
-    }
+    // }
 
-    decreaseSpeed() {
+    // decreaseSpeed() {
 
-    }
+    // }
 }
 
 const interval = new Interval;
