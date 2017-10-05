@@ -17,12 +17,23 @@ class Interval {
         let animationInterval = this.defineInterval();
         console.log(animationInterval);
         document.getElementById("jellyfish-animation").style.animationIterationCount = 4;
-        document.getElementById("jellyfish-animation").style.animationDuration = "5900ms";
+        document.getElementById("jellyfish-animation").style.animationDuration = '6000ms';
     }
 
     defineInterval() {
         this.timeInterval = this.nextTime - this.startTime;
-        console.log(this.timeInterval);
+        return this.timeInterval;
+    }
+
+    increaseSpeed() {
+        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+        document.getElementById("jellyfish-animation").style.animationDuration = '${jellySpeed}+1000ms';
+        console.log(jellySpeed);
+        
+    }
+
+    decreaseSpeed() {
+
     }
 }
 
@@ -98,3 +109,5 @@ class Timer {
 }
 
 const timer = new Timer;
+
+
