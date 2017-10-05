@@ -34,19 +34,9 @@ p {
         color: #8e44ad;
       }
       
-      20% {
+      25% {
         
         color: #1abc9c;
-      }
-      
-      30% {
-        
-        color: #d35400;
-      }
-      
-      40% {
-        
-        color: blue;
       }
       
       50% {
@@ -54,22 +44,9 @@ p {
         color: #34495e;
       }
       
-      60% {
-        
-        color: blue;
-      }
       
-      70% {
+      75% {
         
-        color: #2980b9;
-      }
-      80% {
-     
-        color: #f1c40f;
-      }
-      
-      90% {
-     
         color: #2980b9;
       }
       
@@ -81,32 +58,31 @@ p {
 
 .j {
     font-size: 48px;
-    /* animation-delay: 0.2s;
-    -webkit-animation:colorchange 20s infinite alternate; */
+        -webkit-animation: colorchange 5s infinite alternate;
 }
 
 .e {
     font-size: 48px;
-    /* animation-delay: 0.4s;
-    -webkit-animation:colorchange 20s infinite alternate; */
+    -webkit-animation: colorchange 5s infinite alternate;
+    animation-delay: 0.2s;
 }
 
 .l1 {
     font-size: 48px;
-    /* animation-delay: 0.6s;
-    -webkit-animation:colorchange 20s infinite alternate; */
+    -webkit-animation: colorchange 5s infinite alternate;
+    animation-delay: 0.4s;
 }
 
 .l2 {
     font-size: 48px;
-    /* animation-delay: 0.8s;
-    -webkit-animation:colorchange 20s infinite alternate; */
+    -webkit-animation: colorchange 5s infinite alternate;
+    animation-delay: 0.6s;
 }
 
 .i {
     font-size: 48px;
-    /* animation-delay: 1s;
-    -webkit-animation:colorchange 20s infinite alternate; */
+    -webkit-animation: colorchange 5s infinite alternate;
+    animation-delay: 0.8s;
 }
 
 .social {

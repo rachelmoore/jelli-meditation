@@ -192,7 +192,7 @@ const timer = new Timer;
 
 
 // var jellyOver = document.getElementById("jellyfish-animation");
-// jellyOver.addEventListener("animationend", this.start());
+// jellyOver.addEventListener("animationend", timer.start());
 
 
 
