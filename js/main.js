@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     startCycle.addEventListener('click', interval.startInterval);
     stopCycle.addEventListener('click', interval.stopInterval);
 
-    const startTimer = document.querySelector('.start-timer');
+    // const startTimer = document.querySelector('.start-timer');
     const stopTimer = document.querySelector('.stop-timer');
-    startTimer.addEventListener('click', timer.start);
+    // startTimer.addEventListener('click', timer.start);
     stopTimer.addEventListener('click', timer.stop);
 
     console.log(timer);

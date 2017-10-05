@@ -16,14 +16,20 @@ class Interval {
     stopInterval(animation) {
         this.nextTime = new Date();
         let animationInterval = this.defineInterval.bind(this)();
-        // console.log(document.getElementById("jellyfish-animation"))
-        let count = 0;
-        document.getElementById("jellyfish-animation").style.animationIterationCount = 10;
+
+        const jellyfish1 = document.getElementById("jellyfish-animation1");
+        const jellyfish2 = document.getElementById("jellyfish-animation2");
+        const jcontainer1 = document.getElementById('jellyfish-container1');
+        const jcontainer2 = document.getElementById('jellyfish-container2');
+    
+        jellyfish2.style.animationIterationCount = 10;
+        jellyfish2.style.animationTimingFunction = 'cubic-bezier';
+        jellyfish2.style.animationDuration = `${animationInterval}ms`;
+
+        jcontainer1.classList.add('hidden');
+        jcontainer2.classList.remove('hidden');
         
-        document.getElementById("jellyfish-animation").style.animationTimingFunction = 'cubic-bezier';
-        document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
-        // var jellyOver = document.getElementById("jellyfish-animation");
-        setTimeout( () => this.timer.start(), animationInterval * 9);
+        setTimeout( () => this.timer.start(), animationInterval * 10);
     }
 
     defineInterval() {

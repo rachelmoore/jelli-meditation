@@ -71,9 +71,9 @@
 	    startCycle.addEventListener('click', interval.startInterval);
 	    stopCycle.addEventListener('click', interval.stopInterval);
 	
-	    var startTimer = document.querySelector('.start-timer');
+	    // const startTimer = document.querySelector('.start-timer');
 	    var stopTimer = document.querySelector('.stop-timer');
-	    startTimer.addEventListener('click', timer.start);
+	    // startTimer.addEventListener('click', timer.start);
 	    stopTimer.addEventListener('click', timer.stop);
 	
 	    console.log(timer);
@@ -218,16 +218,22 @@
 	
 	            this.nextTime = new Date();
 	            var animationInterval = this.defineInterval.bind(this)();
-	            // console.log(document.getElementById("jellyfish-animation"))
-	            var count = 0;
-	            document.getElementById("jellyfish-animation").style.animationIterationCount = 10;
 	
-	            document.getElementById("jellyfish-animation").style.animationTimingFunction = 'cubic-bezier';
-	            document.getElementById("jellyfish-animation").style.animationDuration = animationInterval + "ms";
-	            // var jellyOver = document.getElementById("jellyfish-animation");
+	            var jellyfish1 = document.getElementById("jellyfish-animation1");
+	            var jellyfish2 = document.getElementById("jellyfish-animation2");
+	            var jcontainer1 = document.getElementById('jellyfish-container1');
+	            var jcontainer2 = document.getElementById('jellyfish-container2');
+	
+	            jellyfish2.style.animationIterationCount = 10;
+	            jellyfish2.style.animationTimingFunction = 'cubic-bezier';
+	            jellyfish2.style.animationDuration = animationInterval + "ms";
+	
+	            jcontainer1.classList.add('hidden');
+	            jcontainer2.classList.remove('hidden');
+	
 	            setTimeout(function () {
 	                return _this.timer.start();
-	            }, animationInterval * 9);
+	            }, animationInterval * 10);
 	        }
 	    }, {
 	        key: "defineInterval",
