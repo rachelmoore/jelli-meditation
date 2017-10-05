@@ -10,5 +10,22 @@ module.exports = {
         devtoolModuleFilenameTemplate: '[resourcePath]',
         devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
     },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /(node_modules)/,
+                loader: 'babel',
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]
+    },
     devtool: 'source-maps',
 };
+
+

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel='stylesheet' href='css/style.css' type='text/css'>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/bundle.js"></script>
 </head>
 
 <body>
@@ -40,8 +40,8 @@
                     <p>Step 1: Click the "Start Breath Cycle" button below as you take a deep inhale, fully filling your lungs. Let the air out
                         gently and click "Stop" button when you have fully exhaled.</p>
                     <div id="start-stop-buttons" class="start-stop-buttons">
-                        <button id="start" class="start" onClick="interval.startInterval()">Start Breath Cycle</button>
-                        <button id="stop" class="stop" onClick="interval.stopInterval()">Stop Breath Cycle</button>
+                        <button id="start" class="start">Start Breath Cycle</button>
+                        <button id="stop" class="stop">Stop Breath Cycle</button>
                     </div>
                 </div>
 
@@ -50,8 +50,8 @@
                     that you just set. To speed up or slow down the cycle as you breathe, use the up and down buttons below.</p>
                     <div id="up-down-buttons" class="up-down-buttons">
                         <center>
-                            <button id="up" class="up" onClick="interval.increaseSpeed()"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>                        
-                            <button id="down" class="down" onClick="interval.decreaseSpeed()"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                            <button id="up" class="up" ><i class="fa fa-chevron-up" aria-hidden="true"></i></button>                        
+                            <button id="down" class="down"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
                         </center>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
             <div id="timer" class="timer">
                 <button id="start-timer" class="start-timer" onClick="timer.start()">Start</button>
                 <span class="hour" id="hour">00</span>:<span class="minute" id="minute">00</span>:<span class="second" id="second">00</span>
-                <button id="stop-timer" class="stop-timer" onClick="timer.stop()">Stop</button>
+                <button id="stop-timer" class="stop-timer">Stop</button>
             </div>
             <!-- <h3>अधिṭṭह्āना - Pali for "strong determination"</h3> -->
         </div>

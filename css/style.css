@@ -23,38 +23,38 @@ p {
     /* -webkit-animation:colorchange 20s infinite alternate; */
 }
 
-/* @-webkit-keyframes colorchange {
+@-webkit-keyframes colorchange {
       0% {
         
-        color: blue;
+        color: red;
       }
       
       10% {
         
-        color: #8e44ad;
+        color: #orange;
       }
       
       25% {
         
-        color: #1abc9c;
+        color: #yellow;
       }
       
       50% {
         
-        color: #34495e;
+        color: #green;
       }
       
       
       75% {
         
-        color: #2980b9;
+        color: #blue;
       }
       
       100% {
         
-        color: pink;
+        color: orange;
       }
-    } */
+    }
 
 .j {
     font-size: 48px;
@@ -243,6 +243,8 @@ p {
     justify-content: center;
     flex-direction: column;
     background-color: #1E1E1E;
+    overflow: visible;
+    outline: none;
 }
 
 .jellyfish-animation {
@@ -267,7 +269,7 @@ p {
   /* animation-duration: 5s; */
   /* animation-timing-function: ease-in-out;
 -webkit-animation-timing-function: ease-in-out; */
- animation-delay: 0s; 
+ animation-delay: 1s; 
 }
 
 /* .jellyfish-animation:before {

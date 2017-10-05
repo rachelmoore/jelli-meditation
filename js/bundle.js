@@ -6,21 +6,21 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
+/******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/ 		}
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
 /******/ 		};
 /******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/
 /******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
+/******/ 		module.loaded = true;
 /******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -33,169 +33,229 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/js/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(1);
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _timer = __webpack_require__(2);
+	
+	var _timer2 = _interopRequireDefault(_timer);
+	
+	var _interval = __webpack_require__(3);
+	
+	var _interval2 = _interopRequireDefault(_interval);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    var timer = new _timer2.default();
+	    var interval = new _interval2.default(timer);
+	    var startCycle = document.querySelector('.start');
+	    var stopCycle = document.querySelector('.stop');
+	    startCycle.addEventListener('click', interval.startInterval);
+	    stopCycle.addEventListener('click', interval.stopInterval);
+	
+	    var startTimer = document.querySelector('.start-timer');
+	    var stopTimer = document.querySelector('.stop-timer');
+	    startTimer.addEventListener('click', timer.start);
+	    stopTimer.addEventListener('click', timer.stop);
+	
+	    console.log(timer);
+	    console.log(interval);
+	});
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Timer = function () {
+	    function Timer() {
+	        _classCallCheck(this, Timer);
+	
+	        var startTime = 0;
+	        var running = 0;
+	
+	        this.hours = 0;
+	        this.minutes = 0;
+	        this.seconds = 0;
+	        this.tick = this.tick.bind(this);
+	        this.start = this.start.bind(this);
+	        this.stop = this.stop.bind(this);
+	    }
+	
+	    _createClass(Timer, [{
+	        key: "printTime",
+	        value: function printTime() {
+	            var second = 0;
+	            var minute = 0;
+	            var hour = 0;
+	
+	            second = this.seconds < 10 ? "0" + this.seconds : this.seconds;
+	            minute = this.minutes < 10 ? "0" + this.minutes : this.minutes;
+	            hour = this.hours < 10 ? "0" + this.hours : this.hours;
+	
+	            var spanSecond = document.getElementById('second');
+	            var spanMinute = document.getElementById('minute');
+	            var spanHour = document.getElementById('hour');
+	
+	            spanSecond.innerHTML = second;
+	            spanMinute.innerHTML = minute;
+	            spanHour.innerHTML = hour;
+	
+	            var timeString = [hour, minute, second].join(":");
+	
+	            // don't forget to clear after testing
+	            console.log(timeString);
+	        }
+	    }, {
+	        key: "start",
+	        value: function start() {
+	            this.running = setInterval(this.tick, 1000);
+	        }
+	    }, {
+	        key: "tick",
+	        value: function tick() {
+	            this.incrementSeconds();
+	            this.printTime();
+	        }
+	    }, {
+	        key: "incrementSeconds",
+	        value: function incrementSeconds() {
+	            this.seconds += 1;
+	            if (this.seconds === 60) {
+	                this.seconds = 0;
+	                this.incrementMinutes();
+	            }
+	        }
+	    }, {
+	        key: "incrementMinutes",
+	        value: function incrementMinutes() {
+	            this.minutes += 1;
+	            if (this.minutes === 60) {
+	                this.minutes = 0;
+	                this.incrementHours();
+	            }
+	        }
+	    }, {
+	        key: "incrementHours",
+	        value: function incrementHours() {
+	            this.hours = (this.hours + 1) % 24;
+	        }
+	    }, {
+	        key: "stop",
+	        value: function stop() {
+	            clearInterval(this.running);
+	        }
+	    }]);
+	
+	    return Timer;
+	}();
+	
+	exports.default = Timer;
 
-class Interval {
-    constructor() {
-    this.startTime = 0;
-    this.nextTime = 0;
-    this.timeInterval = 0;
-    }
-    
-    startInterval() {
-        this.startTime = new Date();
-        console.log(this.startTime);
-    }
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
 
-    stopInterval() {
-        this.nextTime = new Date();
-        console.log(this.nextTime);
-        let animationInterval = this.defineInterval();
-        console.log(animationInterval);
-        document.getElementById("jellyfish-animation").style.animationIterationCount = 37;
-        document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
-    }
-
-    defineInterval() {
-        this.timeInterval = this.nextTime - this.startTime;
-        return this.timeInterval;
-    }
-
-    increaseSpeed() {
-        let animationInterval = this.defineInterval();
-        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
-        let newSpeed = jellySpeed + 1500;
-        document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
-    }
-
-    decreaseSpeed() {
-        let animationInterval = this.defineInterval();
-        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
-        let newSpeed = jellySpeed - 1500;
-        document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
-    }
-}
-
-const interval = new Interval;
-
-
-
-class Timer {
-    constructor() {
-        const startTime = 0;
-        const running = 0;
-
-        this.hours = 0;
-        this.minutes =  0;
-        this.seconds = 0;
-        this.tick = this.tick.bind(this);
-    }
-
-    printTime() {
-        let second = 0;
-        let minute = 0;
-        let hour = 0;
-
-        second = (this.seconds < 10) ? "0"+this.seconds : this.seconds;
-        minute = (this.minutes < 10) ? "0"+this.minutes : this.minutes;
-        hour = (this.hours < 10) ? "0"+this.hours : this.hours;
-
-        let spanSecond = document.getElementById('second');
-        let spanMinute = document.getElementById('minute');
-        let spanHour = document.getElementById('hour');
-
-        spanSecond.innerHTML = second;
-        spanMinute.innerHTML = minute;
-        spanHour.innerHTML = hour;
-        
-        const timeString = [hour, minute, second].join(":");
-
-        // don't forget to clear after testing
-        console.log(timeString);
-    }
-
-    start() {
-        this.running = setInterval(this.tick, 1000);
-    }
-
-    tick() {
-        this.incrementSeconds();
-        this.printTime();
-    }
-
-    incrementSeconds() {
-        this.seconds += 1;
-        if (this.seconds === 60) {
-            this.seconds = 0;
-            this.incrementMinutes();
-        }
-    }
-
-    incrementMinutes() {
-        this.minutes += 1;
-        if (this.minutes === 60) {
-            this.minutes = 0; 
-            this.incrementHours();
-        }
-    }
-
-    incrementHours() {
-        this.hours = (this.hours + 1) % 24;
-    }
-
-    stop() {
-        clearInterval(this.running);
-    }
-}
-
-const timer = new Timer;
-
-
-// var jellyOver = document.getElementById("jellyfish-animation");
-// jellyOver.addEventListener("animationend", timer.start());
-
-
-
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Interval = function () {
+	    function Interval(timer) {
+	        _classCallCheck(this, Interval);
+	
+	        this.startTime = 0;
+	        this.nextTime = 0;
+	        this.timeInterval = 0;
+	        this.timer = timer;
+	
+	        this.stopInterval = this.stopInterval.bind(this);
+	        this.startInterval = this.startInterval.bind(this);
+	    }
+	
+	    _createClass(Interval, [{
+	        key: "startInterval",
+	        value: function startInterval() {
+	            this.startTime = new Date();
+	        }
+	    }, {
+	        key: "stopInterval",
+	        value: function stopInterval(animation) {
+	            var _this = this;
+	
+	            this.nextTime = new Date();
+	            var animationInterval = this.defineInterval.bind(this)();
+	            // console.log(document.getElementById("jellyfish-animation"))
+	            var count = 0;
+	            document.getElementById("jellyfish-animation").style.animationIterationCount = 10;
+	
+	            document.getElementById("jellyfish-animation").style.animationTimingFunction = 'cubic-bezier';
+	            document.getElementById("jellyfish-animation").style.animationDuration = animationInterval + "ms";
+	            // var jellyOver = document.getElementById("jellyfish-animation");
+	            setTimeout(function () {
+	                return _this.timer.start();
+	            }, animationInterval * 9);
+	        }
+	    }, {
+	        key: "defineInterval",
+	        value: function defineInterval() {
+	            this.timeInterval = this.nextTime - this.startTime;
+	            return this.timeInterval;
+	        }
+	
+	        // increaseSpeed() {
+	        //     let animationInterval = this.defineInterval();
+	        //     let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+	        //     let newSpeed = jellySpeed + 1500;
+	        //     document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
+	        // }
+	
+	        // decreaseSpeed() {
+	        //     let animationInterval = this.defineInterval();
+	        //     let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+	        //     let newSpeed = jellySpeed - 1500;
+	        //     document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
+	        // }
+	
+	    }]);
+	
+	    return Interval;
+	}();
+	
+	exports.default = Interval;
 
 /***/ })
 /******/ ]);
