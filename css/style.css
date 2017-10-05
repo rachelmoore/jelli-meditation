@@ -172,6 +172,86 @@ p {
     border-radius: 5px;
 }
 
+.up {
+    min-height: 25px;
+    width: 30px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 5px;
+    color: #e5e5e5
+}
+
+.up:hover{
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
+.down {
+    min-height: 25px;
+    width: 30px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 5px;
+    color: #e5e5e5
+}
+
+.down:hover{
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
+.start-timer {
+    min-height: 25px;
+    width: 70px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #e5e5e5
+}
+
+.start-timer:hover {
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
+.stop-timer {
+    min-height: 25px;
+    width: 70px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #e5e5e5
+}
+
+.stop-timer:hover {
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
 .timer {
     font-family: 'Roboto', sans-serif;
     color: #e5e5e5;
@@ -186,33 +266,37 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: #1E1E1E;
 }
 
 .jellyfish-animation {
   margin-top: 150px;
   margin-bottom: 150px;
   margin-left: 100px;
+  margin-right: 20px;
   width: 200px;
   height: 200px;
+  display: block;
+  position: relative;
   background-color: #e5e5e5;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
-  border-radius: 100px;
+  border-radius: 101px;
   -webkit-box-shadow: 0 0 10px #e5e5e5; 
   -moz-box-shadow: 0 0 10px #e5e5e5; 
   box-shadow: 0 0 10px #e5e5e5;
   animation-name: circle-pulse; 
-  animation-direction: alternate;
+  /* animation-direction: alternate; */
   /* animation-iteration-count: 6; */
   /* animation-duration: 5s; */
-  animation-timing-function: ease-in-out;
--webkit-animation-timing-function: ease-in-out;
-  
+  /* animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out; */
+ animation-delay: 0s; 
 }
 
-.jellyfish-animation:before {
+/* .jellyfish-animation:before {
    
-}
+} */
 
 .jellyfish-animation:after {
     content: '';
@@ -224,6 +308,7 @@ p {
     border-radius: 90px;
     left: 10px;
     top: 10px;
+    bottom: 10px;
     -webkit-box-shadow: 0 0 10px #e5e5e5; 
     -moz-box-shadow: 0 0 10px #e5e5e5; 
     box-shadow: 0 0 10px #e5e5e5;
@@ -238,34 +323,50 @@ p {
     -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
+ 
   }
-  /* 25%  {
+  25%  {
     transform: scale(1.25);
     -moz-border-radius: 113px;
   -webkit-border-radius: 113px;
   border-radius: 113px;
-  } */
+
+  }
   50%  {
-    transform: scale(1.5);
+    transform: scale(1.75);
     -moz-border-radius: 125px;
   -webkit-border-radius: 125px;
   border-radius: 125px;
+  
   }
-  /* 75%  { 
-    transform: scale(1.75);
-    -moz-border-radius: 138px;
-  -webkit-border-radius: 138px;
-  border-radius: 138px;
-  } */
   
   100% {  
-    transform: scale(2);
+    transform: scale(1);
     -moz-border-radius: 150px;
   -webkit-border-radius: 150px;
   border-radius: 150px;
+
   }
 }
 
 .footer {
   
+}
+
+button:active {
+outline: none;
+border: none;
+}
+
+button:focus {outline:0;}
+
+a { 
+    color:#e5e5e5;
+    text-decoration:none;
+}
+
+a:hover { 
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    text-decoration: none;
 }

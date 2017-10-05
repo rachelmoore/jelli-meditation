@@ -16,7 +16,7 @@ class Interval {
         console.log(this.nextTime);
         let animationInterval = this.defineInterval();
         console.log(animationInterval);
-        document.getElementById("jellyfish-animation").style.animationIterationCount = 10;
+        document.getElementById("jellyfish-animation").style.animationIterationCount = 37;
         document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
     }
 
@@ -25,20 +25,23 @@ class Interval {
         return this.timeInterval;
     }
 
-    // increaseSpeed() {
-    //     let animationInterval = this.defineInterval();
-    //     let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
-    //     document.getElementById("jellyfish-animation").style.animationDuration = `${animationInterval}ms`;
-    //     console.log(jellySpeed);
-        
-    // }
+    increaseSpeed() {
+        let animationInterval = this.defineInterval();
+        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+        let newSpeed = jellySpeed + 1500;
+        document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
+    }
 
-    // decreaseSpeed() {
-
-    // }
+    decreaseSpeed() {
+        let animationInterval = this.defineInterval();
+        let jellySpeed = document.getElementById("jellyfish-animation").style.animationDuration;
+        let newSpeed = jellySpeed - 1500;
+        document.getElementById("jellyfish-animation").style.animationDuration = `${newSpeed}ms`;
+    }
 }
 
 const interval = new Interval;
+
 
 
 class Timer {
@@ -110,5 +113,9 @@ class Timer {
 }
 
 const timer = new Timer;
+
+
+// var jellyOver = document.getElementById("jellyfish-animation");
+// jellyOver.addEventListener("animationend", this.start());
 
 
