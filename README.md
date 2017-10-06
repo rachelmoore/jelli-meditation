@@ -29,9 +29,18 @@ In jellī, users are able to:
 * CSS with keyframes for animation of the logo and timed pulsing circle. 
 * HTML
 
-## A tricky problem & hack-y solution
+## A tricky problem & tricky solution
 
 The animation is triggered upon the user hitting the STOP BREATH CYCLE button. 
+
+The STOP BREATH CYCLE button first captures a new Date object and then creates the breath cycle interval by subtracting the Date object that was created when the START BREATH CYCLE button was clicked. 
+
+This interval (`animationInterval`) is then used to set the `animation-duration`. Because each person's breath cycle is a different length, the interval is dynamically set at the time of hitting the STOP BREATH CYCLE button. 
+
+A problem I ran into was that the animation would begin at different points in the CSS @keyframes. Even when I added a delay to the animation in the CSS, the problem was still there. The jerkiness of the start of the animation was distracting and ruined the intended smooth flow of the animation. 
+
+The solution was to create a second `div` with the class `jellyfish-animation` wrapped in a container with the class 'hidden' and then apply the animation to this class and make the original `jellyfish-animation` class hidden. It buys just a portion of a second but this extra time is enough to buffer the loading of the animation so it starts from 0%. 
+
 
 ```
 class Interval {
