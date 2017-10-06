@@ -228,6 +228,26 @@ p {
     border-radius: 5px;
 }
 
+.reset {
+    min-height: 25px;
+    width: 70px;
+    color: #1E1E1E;
+    background-color: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #e5e5e5
+}
+
+.reset:hover {
+    color: #1E1E1E;
+    background-color: #e5e5e5;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
 .timer {
     font-family: 'Roboto', sans-serif;
     color: #e5e5e5;

@@ -76,6 +76,10 @@
 	    // startTimer.addEventListener('click', timer.start);
 	    stopTimer.addEventListener('click', timer.stop);
 	
+	    // const resetButton = document.querySelector('.reset');
+	    // resetButton.addEventListener('click', interval.resetInterval);
+	    // resetButton.addEventListener('click', timer.resetTimer);
+	
 	    console.log(timer);
 	    console.log(interval);
 	});
@@ -107,6 +111,7 @@
 	        this.tick = this.tick.bind(this);
 	        this.start = this.start.bind(this);
 	        this.stop = this.stop.bind(this);
+	        this.resetTimer = this.resetTimer.bind(this);
 	    }
 	
 	    _createClass(Timer, [{
@@ -172,6 +177,14 @@
 	        value: function stop() {
 	            clearInterval(this.running);
 	        }
+	    }, {
+	        key: "resetTimer",
+	        value: function resetTimer() {
+	            this.second = 0;
+	            this.minute = 0;
+	            this.hour = 0;
+	            this.printTime();
+	        }
 	    }]);
 	
 	    return Timer;
@@ -204,6 +217,7 @@
 	
 	        this.stopInterval = this.stopInterval.bind(this);
 	        this.startInterval = this.startInterval.bind(this);
+	        this.resetInterval = this.resetInterval.bind(this);
 	    }
 	
 	    _createClass(Interval, [{
@@ -234,6 +248,13 @@
 	            setTimeout(function () {
 	                return _this.timer.start();
 	            }, animationInterval * 10);
+	        }
+	    }, {
+	        key: "resetInterval",
+	        value: function resetInterval() {
+	            this.startTime = 0;
+	            this.nextTime = 0;
+	            this.timeInterval = 0;
 	        }
 	    }, {
 	        key: "defineInterval",

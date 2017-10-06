@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // startTimer.addEventListener('click', timer.start);
     stopTimer.addEventListener('click', timer.stop);
 
+    // const resetButton = document.querySelector('.reset');
+    // resetButton.addEventListener('click', interval.resetInterval);
+    // resetButton.addEventListener('click', timer.resetTimer);
+
     console.log(timer);
     console.log(interval);
     

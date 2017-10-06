@@ -9,6 +9,7 @@ class Timer {
         this.tick = this.tick.bind(this);
         this.start = this.start.bind(this);
         this.stop = this.stop.bind(this);
+        this.resetTimer = this.resetTimer.bind(this);
     }
 
     printTime() {
@@ -65,6 +66,13 @@ class Timer {
 
     stop() {
         clearInterval(this.running);
+    }
+
+    resetTimer() {
+        this.second = 0;
+        this.minute = 0;
+        this.hour = 0;
+        this.printTime();
     }
 }
 

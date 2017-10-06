@@ -7,6 +7,7 @@ class Interval {
 
         this.stopInterval = this.stopInterval.bind(this);
         this.startInterval = this.startInterval.bind(this);
+        this.resetInterval = this.resetInterval.bind(this);
     }
 
     startInterval() {
@@ -30,6 +31,12 @@ class Interval {
         jcontainer2.classList.remove('hidden');
         
         setTimeout( () => this.timer.start(), animationInterval * 10);
+    }
+
+    resetInterval() {
+        this.startTime = 0;
+        this.nextTime = 0;
+        this.timeInterval = 0;
     }
 
     defineInterval() {
