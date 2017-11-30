@@ -238,7 +238,7 @@
 	            var jcontainer1 = document.getElementById('jellyfish-container1');
 	            var jcontainer2 = document.getElementById('jellyfish-container2');
 	
-	            jellyfish2.style.animationIterationCount = 10;
+	            jellyfish2.style.animationIterationCount = 30;
 	            jellyfish2.style.animationTimingFunction = 'cubic-bezier';
 	            jellyfish2.style.animationDuration = animationInterval + "ms";
 	
@@ -247,7 +247,7 @@
 	
 	            setTimeout(function () {
 	                return _this.timer.start();
-	            }, animationInterval * 10);
+	            }, animationInterval * 30);
 	        }
 	    }, {
 	        key: "resetInterval",

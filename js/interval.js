@@ -23,14 +23,14 @@ class Interval {
         const jcontainer1 = document.getElementById('jellyfish-container1');
         const jcontainer2 = document.getElementById('jellyfish-container2');
     
-        jellyfish2.style.animationIterationCount = 10;
+        jellyfish2.style.animationIterationCount = 30;
         jellyfish2.style.animationTimingFunction = 'cubic-bezier';
         jellyfish2.style.animationDuration = `${animationInterval}ms`;
 
         jcontainer1.classList.add('hidden');
         jcontainer2.classList.remove('hidden');
         
-        setTimeout( () => this.timer.start(), animationInterval * 10);
+        setTimeout( () => this.timer.start(), animationInterval * 30);
     }
 
     resetInterval() {
