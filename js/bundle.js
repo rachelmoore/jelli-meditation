@@ -247,7 +247,7 @@
 	
 	            setTimeout(function () {
 	                return _this.timer.start();
-	            }, animationInterval * 30);
+	            }, animationInterval * 20);
 	        }
 	    }, {
 	        key: "resetInterval",
