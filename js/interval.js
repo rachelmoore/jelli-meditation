@@ -30,7 +30,7 @@ class Interval {
         jcontainer1.classList.add('hidden');
         jcontainer2.classList.remove('hidden');
         
-        setTimeout( () => this.timer.start(), animationInterval * 10);
+        setTimeout( () => this.timer.start(), animationInterval * 30);
     }
 
     resetInterval() {
