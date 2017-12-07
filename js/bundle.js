@@ -68,6 +68,7 @@
 	    var interval = new _interval2.default(timer);
 	    var startCycle = document.querySelector('.start');
 	    var stopCycle = document.querySelector('.stop');
+	
 	    startCycle.addEventListener('click', interval.startInterval);
 	    stopCycle.addEventListener('click', interval.stopInterval);
 	

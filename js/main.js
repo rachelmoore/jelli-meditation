@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const interval = new Interval(timer);
     const startCycle = document.querySelector('.start');
     const stopCycle = document.querySelector('.stop');
+
+    
     startCycle.addEventListener('click', interval.startInterval);
     stopCycle.addEventListener('click', interval.stopInterval);
 
