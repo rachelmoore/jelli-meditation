@@ -61,13 +61,22 @@
 	
 	var _interval2 = _interopRequireDefault(_interval);
 	
+	var _modal = __webpack_require__(4);
+	
+	var _modal2 = _interopRequireDefault(_modal);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
+	
 	    var timer = new _timer2.default();
 	    var interval = new _interval2.default(timer);
 	    var startCycle = document.querySelector('.start');
 	    var stopCycle = document.querySelector('.stop');
+	    var modal = new _modal2.default(document.querySelector('.modal-overlay'));
+	
+	    window.openModal = modal.open.bind(modal);
+	    window.openModal();
 	
 	    startCycle.addEventListener('click', interval.startInterval);
 	    stopCycle.addEventListener('click', interval.stopInterval);
@@ -284,6 +293,53 @@
 	}();
 	
 	exports.default = Interval;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Modal = function () {
+	    function Modal(overlay) {
+	        var _this = this;
+	
+	        _classCallCheck(this, Modal);
+	
+	        this.overlay = overlay;
+	        var closeButton = overlay.querySelector('.button-close');
+	        closeButton.addEventListener('click', this.close.bind(this));
+	        overlay.addEventListener('click', function (e) {
+	            if (e.srcElement.id === _this.overlay.id) {
+	                _this.close();
+	            }
+	        });
+	    }
+	
+	    _createClass(Modal, [{
+	        key: 'open',
+	        value: function open() {
+	            this.overlay.classList.remove('is-hidden');
+	        }
+	    }, {
+	        key: 'close',
+	        value: function close() {
+	            this.overlay.classList.add('is-hidden');
+	        }
+	    }]);
+	
+	    return Modal;
+	}();
+	
+	exports.default = Modal;
 
 /***/ })
 /******/ ]);

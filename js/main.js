@@ -1,12 +1,18 @@
 import Timer from './timer';
 import Interval from './interval';
+import Modal from './modal';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     const timer = new Timer();
     const interval = new Interval(timer);
     const startCycle = document.querySelector('.start');
     const stopCycle = document.querySelector('.stop');
+    const modal = new Modal(document.querySelector('.modal-overlay'));
+
+    window.openModal = modal.open.bind(modal);
+    window.openModal();
 
     
     startCycle.addEventListener('click', interval.startInterval);
@@ -26,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 });
+
 
