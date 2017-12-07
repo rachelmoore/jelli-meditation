@@ -315,7 +315,7 @@
 	        _classCallCheck(this, Modal);
 	
 	        this.overlay = overlay;
-	        var closeButton = overlay.querySelector('.button-close');
+	        var closeButton = overlay.querySelector('.stop');
 	        closeButton.addEventListener('click', this.close.bind(this));
 	        overlay.addEventListener('click', function (e) {
 	            if (e.srcElement.id === _this.overlay.id) {
