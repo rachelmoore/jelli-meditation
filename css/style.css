@@ -160,18 +160,18 @@ p {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
-    min-width: 1100px;
-    max-width: 1300px;
+    justify-content: center;
+    /* min-width: 1100px;
+    max-width: 1300px; */
 }
 
-.left-sidebar {
+/* .left-sidebar {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-width: 350px;
     max-width: 350px;
-}
+} */
 
 .start {
     min-height: 25px;
@@ -325,7 +325,7 @@ p {
 }
 
 .jellyfish-container {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     /* min-width: 700px; */
     display: flex;
     justify-content: center;
@@ -338,8 +338,6 @@ p {
 .jellyfish-animation {
   margin-top: 150px;
   margin-bottom: 150px;
-  margin-left: 100px;
-  margin-right: 20px;
   width: 200px;
   height: 200px;
   display: block;
