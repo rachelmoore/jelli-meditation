@@ -286,7 +286,7 @@ p {
     font-size: 20px;
     text-transform: uppercase;
     margin: 10px;
-    color: #e5e5e5
+    color: #e5e5e5;
 }
 
 .stop-timer:hover {
@@ -325,6 +325,10 @@ p {
 }
 .hidden { 
     display: none !important;
+}
+
+.second {
+    margin-right: 8px;
 }
 
 .jellyfish-container {
