@@ -515,13 +515,14 @@ a:hover {
 }
 
 .modal {
+  background-color: #1E1E1E;
   padding: 20px 30px;
   width: 70%;
   max-height: calc(100% - 150px);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   position: relative;
   min-height: 300px;
   margin: 5% auto 0;
-  background: #fff;
   z-index: 9999;
+  margin-top: 30%;
 }
