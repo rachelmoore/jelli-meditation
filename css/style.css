@@ -160,14 +160,11 @@ p {
   /* padding: 20px 30px;
   width: 70%;
   max-height: calc(100% - 150px); */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .content-container {
-    
-
+  display: flex;
+  justify-content: center;
 }
 
 /* .left-sidebar {
@@ -421,7 +418,7 @@ p {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 button:active {
