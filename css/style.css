@@ -277,13 +277,13 @@ p {
 }
 
 .stop-timer {
-    min-height: 25px;
-    width: 70px;
+    min-height: 35px;
+    width: 90px;
     color: #1E1E1E;
     background-color: transparent;
     border: 2px solid #e5e5e5;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 20px;
     text-transform: uppercase;
     margin: 10px;
     color: #e5e5e5
@@ -297,13 +297,13 @@ p {
 }
 
 .reset {
-    min-height: 25px;
-    width: 70px;
+    min-height: 35px;
+    width: 90px;
     color: #1E1E1E;
     background-color: transparent;
     border: 2px solid #e5e5e5;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 20px;
     text-transform: uppercase;
     margin: 10px;
     color: #e5e5e5
@@ -319,7 +319,7 @@ p {
 .timer {
     font-family: 'Roboto', sans-serif;
     color: #e5e5e5;
-    font-size: 38px;
+    font-size: 48px;
     display: flex;
     justify-content: flex-end;
 }
