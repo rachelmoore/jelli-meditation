@@ -343,19 +343,19 @@ p {
 }
 
 .jellyfish-animation {
-  margin-top: 150px;
-  margin-bottom: 150px;
-  width: 200px;
-  height: 200px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 400px;
+  height: 400px;
   display: block;
   position: relative;
   /* background-color: #e5e5e5; */
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 101px;
-  -webkit-box-shadow: 0 0 10px #e5e5e5; 
-  -moz-box-shadow: 0 0 10px #e5e5e5; 
-  box-shadow: 0 0 10px #e5e5e5;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  border-radius: 201px;
+  -webkit-box-shadow: 0 0 20px #e5e5e5; 
+  -moz-box-shadow: 0 0 20px #e5e5e5; 
+  box-shadow: 0 0 20px #e5e5e5;
   animation-name: circle-pulse; 
   /* animation-direction: alternate; */
   /* animation-iteration-count: 6; */
@@ -373,17 +373,62 @@ p {
 .jellyfish-animation:after {
     content: '';
     
-    width: 180px;
-    height: 180px;
+    width: 360px;
+    height: 360px;
     display: block;
     position: relative;
-    border-radius: 90px;
-    left: 10px;
-    top: 10px;
-    bottom: 10px;
-    -webkit-box-shadow: 0 0 10px #e5e5e5; 
-    -moz-box-shadow: 0 0 10px #e5e5e5; 
-    box-shadow: 0 0 10px #e5e5e5;
+    border-radius: 180px;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    -webkit-box-shadow: 0 0 20px #e5e5e5; 
+    -moz-box-shadow: 0 0 20px #e5e5e5; 
+    box-shadow: 0 0 20px #e5e5e5;
+    
+}
+
+.jellyfish-animation-mid {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 400px;
+  height: 400px;
+  display: block;
+  position: relative;
+  /* background-color: #e5e5e5; */
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  border-radius: 201px;
+  -webkit-box-shadow: 0 0 20px #e5e5e5; 
+  -moz-box-shadow: 0 0 20px #e5e5e5; 
+  box-shadow: 0 0 20px #e5e5e5;
+  animation-name: circle-pulse; 
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: 6; */
+  /* animation-duration: 5s; */
+  /* animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out; */
+ animation-delay: 1s; 
+ border-color: #1E1E1E;
+}
+
+/* .jellyfish-animation:before {
+   
+} */
+
+.jellyfish-animation-mid:after {
+    content: '';
+    
+    width: 360px;
+    height: 360px;
+    display: block;
+    position: relative;
+    border-radius: 180px;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    -webkit-box-shadow: 0 0 20px #e5e5e5; 
+    -moz-box-shadow: 0 0 20px #e5e5e5; 
+    box-shadow: 0 0 20px #e5e5e5;
     
 }
 
