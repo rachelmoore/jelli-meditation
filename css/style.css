@@ -1,3 +1,5 @@
+/* Credit to http://www.inwebson.com/ for starry background initial code */
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #e5e5e5;
@@ -23,19 +25,19 @@ body {
  
     /* Animation */
     animation-name: movement;
-    animation-duration: 5s;
+    animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
  
     /* Firefox */
     -moz-animation-name: movement;
-    -moz-animation-duration: 5s;
+    -moz-animation-duration: 15s;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
  
     /* Webkit */
     -webkit-animation-name: movement;
-    -webkit-animation-duration: 5s;
+    -webkit-animation-duration: 15s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
 }
@@ -328,7 +330,7 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
     overflow: visible;
     outline: none;
 }
@@ -342,7 +344,7 @@ p {
   height: 200px;
   display: block;
   position: relative;
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 101px;
@@ -365,7 +367,7 @@ p {
 
 .jellyfish-animation:after {
     content: '';
-    background-color: #1E1E1E;
+    
     width: 180px;
     height: 180px;
     display: block;
