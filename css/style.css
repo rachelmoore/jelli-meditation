@@ -494,7 +494,7 @@ a:hover {
   display: none;
 }
 
-.button-close {
+/* .button-close {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -502,7 +502,7 @@ a:hover {
   top: 10px;
   right: 10px;
   cursor: pointer;
-}
+} */
 
 .modal-overlay {
   position: fixed;
